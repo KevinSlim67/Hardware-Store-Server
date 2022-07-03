@@ -5,7 +5,7 @@
     "node": "17.7.2"
   },
   "description": "Server for Mr Robot Website",
-  "main": "server.js",
+  "main": "script.js",
   "scripts": {
     "start": "node script.js",
     "server": "nodemon server || true"
