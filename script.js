@@ -15,7 +15,7 @@ db.once('open', () => console.log("Connected to database"));
 //set up / route
 app.get('/', async (req, res) => {
     try {
-        console.log('/ Route Handled');
+        res.json('Route / Handled');
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
