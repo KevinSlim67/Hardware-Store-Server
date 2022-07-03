@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
-const Product = require('./models/Product');
 require('dotenv').config();
 
 mongoose.connect(process.env.MONGO_URI);
@@ -12,6 +11,12 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log("Connected to database"));
 
+//allows communication between server and frontend
+app.use(cors());
+
+//allow express server to use json
+app.use(express.json());
+
 //set up / route
 app.get('/', async (req, res) => {
     try {
@@ -20,12 +25,6 @@ app.get('/', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-
-//allows communication between server and frontend
-app.use(cors());
-
-//allow express server to use json
-app.use(express.json());
 
 //creating the route to the subscriber model
 const productsRouter = require('./routes/products');
