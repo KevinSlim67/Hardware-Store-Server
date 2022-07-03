@@ -7,7 +7,7 @@
   "description": "Server for Mr Robot Website",
   "main": "server.js",
   "scripts": {
-    "start": "node script",
+    "start": "node script.js",
     "server": "nodemon server || true"
   },
   "author": "Kevin Slim",
