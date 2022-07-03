@@ -12,6 +12,15 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log("Connected to database"));
 
+//set up / route
+app.get('/', async (req, res) => {
+    try {
+        console.log('/ Route Handled');
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 //allows communication between server and frontend
 app.use(cors());
 
