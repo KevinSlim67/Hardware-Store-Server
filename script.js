@@ -24,7 +24,7 @@ app.use('/products', productsRouter);
 
 
 //start the sever
-app.listen(5000, () => console.log("Server Started"));
+app.listen(process.env.PORT || 5000, () => console.log("Server Started"));
 
 // const product = new Product({
 //     description: " Samsung Galaxy Watch4",
