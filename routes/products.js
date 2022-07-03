@@ -36,30 +36,7 @@ router.get('/:id', getProduct, (req, res) => {
     res.send(res.product);
 });
 
-//Creating one
-// router.post('/', async (req, res) => {
-//     const product = new Product({
-//         name: req.body.name,
-//     })
-
-//     try {
-//         const newProduct = await product.save();
-//         res.status(201).json(newProduct);
-//     } catch (err) {
-//         res.status(400).json({message: err.message});
-//     }
-// });
-
-//Updating one
-router.patch('/:id', (req, res) => {
-
-});
-
-//Deleting one
-router.delete('/:id', (req, res) => {
-
-});
-
+//get one from id
 async function getProduct(req, res, next) {
     let product;
     try {
