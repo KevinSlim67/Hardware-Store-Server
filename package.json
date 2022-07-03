@@ -2,7 +2,7 @@
   "name": "hardware-store-server",
   "version": "1.0.0",
   "engines": {
-    "node": "12.5.0"
+    "node": "17.7.2"
   },
   "description": "Server for Mr Robot Website",
   "main": "server.js",
