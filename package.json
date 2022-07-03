@@ -2,6 +2,10 @@
   "name": "hardware-store-website",
   "version": "0.1.0",
   "private": true,
+   "engines" : { 
+    "npm" : ">=7.0.0",
+    "node" : ">=16.0.0"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
