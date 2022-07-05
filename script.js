@@ -51,6 +51,3 @@ app.listen(process.env.PORT || 5000, () => console.log("Server Started"));
 
 //  });
 //  product.save().then(() => console.log('Product Added')); 
-
-
-
