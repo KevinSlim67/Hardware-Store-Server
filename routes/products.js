@@ -31,6 +31,17 @@ router.get('/category-and-limit', async (req, res) => {
     }
 })
 
+//getting all who's description contains the inputted string
+router.get('/match', async (req, res) => {
+    try {
+        const products = await Product.find({"description": { "$regex": req.query.searched, "$options": "i" }}).
+        limit(5);
+        res.json(products);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 //Getting one
 router.get('/:id', getProduct, (req, res) => {
     res.send(res.product);
