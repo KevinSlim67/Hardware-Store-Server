@@ -14,7 +14,7 @@ db.once('open', () => console.log("Connected to database"));
 
 // Add headers before the routes are defined
 app.use(
-    cors({origin: ['http://localhost:3000', 'https://mr-robot-hardware-store.netlify.app']})
+    cors({origin: ['http://localhost:3000', '*']})
 );
 
 //allow express server to use json
