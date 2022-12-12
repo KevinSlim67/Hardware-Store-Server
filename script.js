@@ -13,6 +13,13 @@ db.once('open', () => console.log("Connected to database"));
 
 //allows communication between server and frontend
 app.use(cors());
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'https://flourishing-starship-7a1082.netlify.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+    });
 
 //allow express server to use json
 app.use(express.json());
