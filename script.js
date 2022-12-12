@@ -34,10 +34,7 @@ app.use('/products', productsRouter);
 //start the sever
 app.listen(process.env.PORT || 5000, () => console.log("Server Started"));
 
-//ping the server every 5 minutes to prevent it from sleeping
-setInterval(() => {
-    console.log("ping");
-}, 60000);
+
 
 
 
