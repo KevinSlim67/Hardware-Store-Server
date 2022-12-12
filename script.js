@@ -13,12 +13,9 @@ db.once('open', () => console.log("Connected to database"));
 
 
 // Add headers before the routes are defined
-router.get('/', function(req, res) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
-    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
-});
+app.use(
+    cors({origin: ['http://localhost:3000', '*']})
+);
 
 //allow express server to use json
 app.use(express.json());
