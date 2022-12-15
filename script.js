@@ -12,16 +12,7 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log("Connected to database"));
 
 
-const whitelist = ['http://localhost:3000', 'https://mr-robot-hardware-store.netlify.app'];
-app.use(cors({
-  origin: (origin, callback) => {
-    if (whitelist.includes(origin)) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}));
+app.use(cors());
 
 //allow express server to use json
 app.use(express.json());
