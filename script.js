@@ -12,7 +12,7 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log("Connected to database"));
 
 
-const whitelist = ['http://localhost:3000', 'https://burger-hut.netlify.app'];
+const whitelist = ['http://localhost:3000', 'https://mr-robot-hardware-store.netlify.app'];
 app.use(cors({
   origin: (origin, callback) => {
     if (whitelist.includes(origin)) {
